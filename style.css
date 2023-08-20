@@ -1,8 +1,21 @@
 @charset "UTF-08";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 
 :root{
-    
+    /* Primary */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-div-icon: hsla(178, 100%, 50%, 0.554);
+
+   /* Neutral */
+   ---Very-dark-blue-main-bg: hsl(217, 54%, 11%);
+   --Very-dark-blue-cad-bg: hsl(216, 50%, 16%);
+   --Very-dark-blue-line: hsl(215, 32%, 27%);
+   --White: hsl(0, 0%, 100%);
+
+    /* Font */
+    --outfit: 'Outfit', sans-serif;
 }
 
 *{
@@ -12,6 +25,143 @@
 }
 
 body{
-    
+    background-color: var(---Very-dark-blue-main-bg);
     height: 100vh;
+    font-family: var(--outfit);
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: var(--Very-dark-blue-cad-bg);
+    border-radius: 10px;
+    width: 20em;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.img-container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-container img.card-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.img-container .filtro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -100%;
+    background-color: var(--Cyan-div-icon);
+    z-index: 1;
+    opacity: 0;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.img-container .filtro:hover{
+  opacity: 1;
+}
+.img-container .filtro .icon{
+    width: 5em;
+    height: 5em;
+    color: var(--White);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    color: var(--White);
+    gap: 1em;
+
+    
+}
+.text-content h1{
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.text-content h1:hover{
+    color: var(--Cyan);
+    text-shadow: 0px 0px 12px var(--Cyan);
+}
+
+.text-content p{
+    color: var(--Soft-blue);
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+.text-content ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+}
+
+.text-content ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.text-content ul li.number-ETH{
+    color: var(--Cyan);
+    font-weight: 600;
+}
+.text-content ul li.days-left{
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--Soft-blue);
+    text-align: center;
+    height: 10%;
+    gap: .3em;
+    width: 100%;
+    border-top: 2px solid var(--Very-dark-blue-line);
+}
+
+.credits img{
+    width: 2em;
+    height: 2em;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.credits .author{
+    font-weight: 600;
+    color: var(--White);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.credits .author:hover{
+    color: var(--Cyan);
+    text-shadow: 0px 0px 12px var(--Cyan);
 }
